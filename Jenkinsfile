@@ -35,7 +35,7 @@ pipeline {
             }
         }
         
-        stage("Helm Deploy") {
+        stage ("Helm Deploy") {
             steps {
                 script {
                       sh "helm upgrade first --install helm-chart --namespace helm-deployment --set image.tag=$BUILD_NUMBER"
