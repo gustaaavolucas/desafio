@@ -1,5 +1,9 @@
 # desafio
 
+# java app
+
+https://java-app.amldev.com.br/
+
 # Tecnologias Utilziadas:
 EKS, terraform, grafana, prometheus, helm chart
 
