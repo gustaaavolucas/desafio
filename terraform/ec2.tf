@@ -10,16 +10,16 @@ data "aws_ami" "amazon-linux-2" {
 }
 
 resource "aws_instance" "ec2" {
-  ami           = data.aws_ami.amazon-linux-2.id
-  instance_type = "t3a.medium"
-  key_name = "jenkins-server" # Insira o nome da chave criada antes.
-  subnet_id = var.subnet_public_id
-  vpc_security_group_ids = [aws_security_group.permitir_ssh_http.id]
+  ami                         = data.aws_ami.amazon-linux-2.id
+  instance_type               = "t3a.medium"
+  key_name                    = "jenkins-server" # Insira o nome da chave criada antes.
+  subnet_id                   = var.subnet_public_id
+  vpc_security_group_ids      = [aws_security_group.permitir_ssh_http.id]
   associate_public_ip_address = true
 
   tags = {
     Name = "jenkins"
- # Insira o nome da instância de sua preferência.
+    # Insira o nome da instância de sua preferência.
   }
 }
 
