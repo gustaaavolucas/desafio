@@ -1,7 +1,5 @@
 pipeline {
- tools {
-       maven 'Maven3'
-   }  
+
    agent any
    environment {
      registry = "532026769849.dkr.ecr.us-west-2.amazonaws.com/bmw"
